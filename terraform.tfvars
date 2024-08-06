@@ -1,9 +1,9 @@
 dynamic_dashboards = {
   "dashboard_1" = {
-    name        = "dynamic dash"
-    description = "dynamic dash"
+    name        = "dashboard-pages"
+    description = "dashboard-pages"
     pages = {
-      "page_1" = {
+      "page-1" = {
         name = "first page"
         widgets = {
           "widget_1" = {
@@ -13,7 +13,7 @@ dynamic_dashboards = {
             column   = 1
             settings = {
               query      = "FROM Transaction SELECT count(*) AS 'total transactions'"
-              account_id = 4438268
+              account_id = 4510907
             }
           }
          
@@ -24,7 +24,7 @@ dynamic_dashboards = {
             column   = 1
             settings = {
               query      = "FROM Transaction select max(duration) as 'max duration' where httpResponseCode = '504' timeseries"
-              account_id = 4438268
+              account_id = 4510907
             }
           }
           "widget_3" = {
@@ -34,7 +34,7 @@ dynamic_dashboards = {
             column   = 2
             settings = {
               query      = "SELECT percentage(count(*), WHERE `error` IS true) AS ErrorRate FROM Transaction"
-              account_id = 4438268
+              account_id = 4510907
             }
           }
         }
@@ -49,7 +49,7 @@ dynamic_dashboards = {
             column   = 1
             settings = {
               query      = "SELECT average(`duration`) AS AvgResponseTime FROM Transaction SINCE 7 days ago COMPARE WITH 7 days ago"
-              account_id = 4438268
+              account_id = 4510907
             }
           }
           "widget_5" = {
@@ -59,7 +59,7 @@ dynamic_dashboards = {
             column   = 2
             settings = {
               query      = "SELECT count(*) AS Throughput FROM Transaction"
-              account_id = 4438268
+              account_id = 4510907
               limit = 5
             }
           }
@@ -69,8 +69,8 @@ dynamic_dashboards = {
             row      = 2
             column   = 1
             settings = {
-              query      = "SELECT average(`apm.key.transaction.duration`) FROM Metric WHERE `entity.guid` IN ('NDQzODI2OHxBUE18QVBQTElDQVRJT058NTQyMTE2Mzk1') FACET `entity.guid`"
-              account_id = 4438268
+              query      = "SELECT average(`apm.key.transaction.duration`) FROM Metric WHERE `entity.guid` IN ('NDUxMDkwN3xBUE18QVBQTElDQVRJT058NTQyMzQ2NzM1') FACET `entity.guid`"
+              account_id = 4510907
             }
           }
           "widget_7" = {
@@ -79,8 +79,8 @@ dynamic_dashboards = {
             row      = 2
             column   = 2
             settings = {
-              query      = "SELECT count(*) FROM ProcessSample WHERE entityName = 'DESKTOP-DBGEEJK' FACET processDisplayName"
-              account_id = 4438268
+              query      = "SELECT count(*) FROM ProcessSample WHERE entityName = 'CEQ-ICT-LAPTOP-287' FACET processDisplayName"
+              account_id = 4510907
             }
           }
         }
